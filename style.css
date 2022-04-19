@@ -28,6 +28,10 @@
     cursor: pointer;
 }
 
+.dropdown-toggle.on {
+    background-image: url(./img/Polygon\ on.png);
+}
+
 .dropdown-toggle:focus {
     border: 1px solid #9b51e0;
     outline: 3px solid #F8E4FF;
