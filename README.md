@@ -11,27 +11,29 @@
 
 * **리스트 클릭 시, 텍스트가 담기기 전에 사라지는 현상**
     * 처음에는 접근을 잘못해서   
-```     
-toggleBtn.addEventListener('click', function(event) {
-    list.classList.toggle('hidden')
-    toggleBtn.classList.toggle('on')
-    console.log(event)
     
-})
-```
+      ```     
+      toggleBtn.addEventListener('click', function(event) {
+         list.classList.toggle('hidden')
+         toggleBtn.classList.toggle('on')
+         console.log(event)
+    
+      })
+      ```
 
     여기에서 문제가 생긴줄 알았음   
+    
     * 캡처링, 버블링은 해당 요소를 중심으로 위에서 요소 순서로 전파되는지, 요소에서 위로 전파되는지   
     이게 핵심인데 착각해서 이 이벤트가 그 밑에 ul 태그까지 건드리는건가 싶어서   
     이벤트 전파 방지 메서드를 써봤으나 당연히 안됨
 
     * 문제는
-```
-toggleBtn.addEventListener('blur', function(event) {
-    list.classList.add('hidden')
-    toggleBtn.classList.remove('on')
-})
-```
+      ```
+      toggleBtn.addEventListener('blur', function(event) {
+         list.classList.add('hidden')
+         toggleBtn.classList.remove('on')
+      })
+      ```
 
     이거였음
 
@@ -39,11 +41,11 @@ toggleBtn.addEventListener('blur', function(event) {
     즉, 빈 화면을 누를 때도 blur 이벤트가 발동하지만 토글 버튼이 아닌 그 밑에   
     리스트를 클릭해도 포커스가 해제되어 발생한 문제
 
-```
-Replace your click event with (mousedown). Mousedown event is called before blur.
-(출처 : 스택오버플로우 https://stackoverflow.com/questions/39439115/how-to-execute-click-function-before-the-blur-function)
-(출처 : 블로그 https://iborymagic.tistory.com/120)
-```
+      ```
+      Replace your click event with (mousedown). Mousedown event is called before blur.
+      (출처 : 스택오버플로우 https://stackoverflow.com/questions/39439115/how-to-execute-click-function-before-the-blur-function)
+      (출처 : 블로그 https://iborymagic.tistory.com/120)
+      ```
 
     blur 이벤트보다 먼저 발생하는 mousedown 으로 바꿔주니 해결
 
