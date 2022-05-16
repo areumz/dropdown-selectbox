@@ -86,4 +86,4 @@ langArr.forEach((item)=>{
     글자 정렬 안 맞아서 text-align: left; 추가
 
 * **(+) 추가**
-    `visibility: hidden;` 으로 처리했는데, 이것은 영역을 차지하기 때문에 display: none; 으로 수정하기
+    `visibility: hidden;` 으로 처리했는데, 이것은 영역을 차지하기 때문에 `display: none;` 으로 수정하기
