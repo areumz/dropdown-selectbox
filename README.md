@@ -77,7 +77,7 @@ langArr.forEach((item)=>{
 })
 ```
 
-* **성능적인 측면에서 innerText  textContent 사용**
+* **성능적인 측면에서 innerText 대신 textContent 사용**
 
 * **리스트마다 글자 길이가 달라서 hover 했을 때 일부 항목이 덜컹거리는 문제**
     * padding을 일정하게 주었는데, width가 빠져있음   
