@@ -2,7 +2,7 @@
 
 ## 미리보기
 ![image](https://github.com/iRRPL-AR/dropdown-selectbox/blob/gh-pages/preview.gif)   
-[드롭다운 구현](https://aruemz.github.io/dropdown-selectbox/)
+[드롭다운 구현](https://areumz.github.io/dropdown-selectbox/)
 
 ## 문제해결
 * **리스트 클릭 시 발생하는 이벤트 객체를 콘솔에 찍어보려 했는데 계속 안됨**
